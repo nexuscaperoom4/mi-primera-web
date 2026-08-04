@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS ESCAPE ROOM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Cargar íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Menú superior -->
+    <header class="navbar">
+        <div class="logo">NE<span class="gold">X</span>US</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#salas">Salas</a>
+            <a href="#menu-bar">Menú & Bar</a>
+            <a href="#" class="btn-reserva" id="open-schedules-btn">Horarios</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <main class="hero">
+        <h1>NE<span class="gold">X</span>US ESCAPE</h1>
+        <p>CONECTA. PIENSA. ESCAPA.</p>
+        <button id="hero-btn">Ver Salas</button>
+    </main>
+
+    <!-- 1. SECCIÓN DE SALAS DE ESCAPE -->
+    <section class="rooms-section" id="salas">
+        <h2>NUESTROS DESAFÍOS</h2>
+        <div class="rooms-grid">
+            <div class="room-card">
+                <span class="room-tag terror">👻 Terror</span>
+                <h3>El Ritual del Silencio</h3>
+                <p>60 MIN | DIFICULTAD: ALTA</p>
+                <button class="btn-card open-modal">Ver Horarios</button>
+            </div>
+            <div class="room-card">
+                <span class="room-tag bank">🏦 Robo al Banco</span>
+                <h3>El Botín de la Reserva</h3>
+                <p>60 MIN | DIFICULTAD: MEDIA</p>
+                <button class="btn-card open-modal">Ver Horarios</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECCIÓN MENÚ & BAR -->
+    <section class="bar-section" id="menu-bar">
+        <h2>LABORATORIO DE POCIONES</h2>
+        <p class="bar-subtitle">Bebidas refrescantes sin alcohol, preparadas con química & magia.</p>
+
+        <!-- Destacado: Bebida Misteriosa -->
+        <div class="mystery-drink">
+            <span class="badge">Especial Escape Room</span>
+            <h3>🎲 Poción Secreta del Día</h3>
+            <p>¿Te atreves al reto? Una combinación misteriosa y deliciosa. Solo dinos si tienes alergias y el laboratorio hará la magia.</p>
+        </div>
+
+        <div class="bar-grid">
+            <!-- Categoría: Sodas Frutales -->
+            <div class="menu-card">
+                <h3>🫧 Pociones & Elixires</h3>
+                <ul>
+                    <li><strong>🟥 Poción Rubí</strong> <span>Frutos rojos</span></li>
+                    <li><strong>🟡 Poción Solar</strong> <span>Frutos amarillos</span></li>
+                    <li><strong>🟣 Poción Violeta</strong> <span>Uva</span></li>
+                    <li><strong>🟢 Poción Esmeralda</strong> <span>Limón, hierbabuena y manzana verde</span></li>
+                    <li><strong>⚡ Poción Energética</strong> <span>Maracuyá, limón, soda & popping boba</span></li>
+                    <li><strong>🧪 Elixir Radioactivo</strong> <span>Limón, manzana verde y kiwi</span></li>
+                </ul>
+            </div>
+
+            <!-- Categoría: Granizados -->
+            <div class="menu-card">
+                <h3>❄️ Granizados & Experiencias</h3>
+                <ul>
+                    <li><strong>🍇 Granizado de Uva / 🥭 Maracuyá</strong> <span>Elige tu base favorita</span></li>
+                    <li><strong>🩸 Sangre de Dragón</strong> <span>Frutos rojos + gomitas mutantes</span></li>
+                    <li><strong>🌌 Poción Galáctica</strong> <span>Uva, soda y algodón de azúcar</span></li>
+                    <li><strong>🧙 La Poción del Hechicero</strong> <span>Crea tu combinación y recibe tu código único</span></li>
+                </ul>
+            </div>
+
+            <!-- Categoría: Ingredientes del Laboratorio -->
+            <div class="menu-card full-width">
+                <h3>🧪 Ingredientes del Laboratorio (Toppings)</h3>
+                <div class="toppings-tags">
+                    <span>🧸 Gomitas mutantes</span>
+                    <span>💥 Perlas explosivas</span>
+                    <span>☁️ Mini malvaviscos</span>
+                    <span>🌈 Polvo mágico</span>
+                    <span>🍓 Cristales de fruta</span>
+                    <span>🥥 Coco rallado</span>
+                    <span>🍪 Rocas de cacao</span>
+                    <span>🍋 Tajín / Chamoy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>NE<span class="gold">X</span>US ESCAPE ROOM</h3>
+            <p>Conecta. Piensa. Escapa.</p>
+            <div class="footer-info">
+                <p>📍 Floridablanca, Santander</p>
+                <p>⏰ Martes a Domingo</p>
+            </div>
+            <p class="copyright">&copy; 2026 Nexus Escape Room. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Ventana Flotante (Modal de Horarios) -->
+    <div class="modal-overlay" id="schedules-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="close-modal-btn">&times;</button>
+            <h2>⏰ HORARIOS DE ATENCIÓN</h2>
+            <p class="modal-subtitle">Reserva tu turno previa disponibilidad</p>
+
+            <div class="schedules-grid">
+                <div class="day-card">
+                    <h4>Martes a Jueves</h4>
+                    <ul>
+                        <li>3:00 pm</li>
+                        <li>4:30 pm</li>
+                        <li>6:00 pm</li>
+                        <li>7:30 pm</li>
+                    </ul>
+                </div>
+
+                <div class="day-card">
+                    <h4>Viernes</h4>
+                    <ul>
+                        <li>2:00 pm</li>
+                        <li>3:30 pm</li>
+                        <li>5:00 pm</li>
+                        <li>6:30 pm</li>
+                        <li>8:00 pm</li>
+                    </ul>
+                </div>
+
+                <div class="day-card">
+                    <h4>Sábado</h4>
+                    <ul>
+                        <li>12:00 pm</li>
+                        <li>1:30 pm</li>
+                        <li>3:00 pm</li>
+                        <li>4:30 pm</li>
+                        <li>6:00 pm</li>
+                        <li>7:30 pm</li>
+                    </ul>
+                </div>
+
+                <div class="day-card">
+                    <h4>Domingo</h4>
+                    <ul>
+                        <li>12:00 pm</li>
+                        <li>1:30 pm</li>
+                        <li>3:00 pm</li>
+                        <li>4:30 pm</li>
+                        <li>6:00 pm</li>
+                        <li>7:30 pm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="https://wa.me/573000000000?text=¡Hola!%20Quiero%20reservar%20un%20horario%20para%20Nexus%20Escape." 
+               class="modal-btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Consultar Disponibilidad por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573183909817?text=¡Hola!%20Quiero%20más%20información%20para%20reservar%20una%20sala%20en%20Nexus%20Escape." 
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="¡Contáctanos por WhatsApp!">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lógica de interacciones -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('schedules-modal');
+            var openBtn = document.getElementById('open-schedules-btn');
+            var heroBtn = document.getElementById('hero-btn');
+            var closeBtn = document.getElementById('close-modal-btn');
+            var roomButtons = document.querySelectorAll('.open-modal');
+
+            // Abrir modal desde el botón "Horarios" del menú
+            if (openBtn) {
+                openBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                });
+            }
+
+            // Abrir modal desde los botones de las tarjetas
+            roomButtons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                });
+            });
+
+            // Botón "Ver Salas" desplaza hacia la sección
+            if (heroBtn) {
+                heroBtn.addEventListener('click', function() {
+                    var roomsSection = document.getElementById('salas');
+                    if (roomsSection) {
+                        roomsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+
+            // Cerrar modal al hacer clic en la X
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    modal.classList.remove('active');
+                });
+            }
+
+            // Cerrar modal al hacer clic fuera del contenido
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

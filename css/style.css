@@ -1,0 +1,570 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Menú Superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #141414;
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.gold {
+    color: #d4af37;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.btn-reserva {
+    background-color: #d4af37;
+    color: #0d0d0d !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+.hero h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #d4af37;
+    color: #0d0d0d;
+}
+
+/* Sección de Salas */
+.rooms-section {
+    padding: 60px 20px;
+}
+
+.rooms-section h2 {
+    color: #d4af37;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.rooms-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.room-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.room-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.room-tag.terror {
+    background-color: #4a0d0d;
+    color: #ff6b6b;
+    border: 1px solid #8b0000;
+}
+
+.room-tag.bank {
+    background-color: #0d2b4a;
+    color: #6ba4ff;
+    border: 1px solid #004085;
+}
+
+.room-card h3 {
+    margin-bottom: 10px;
+}
+
+.room-card p {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.btn-card {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #d4af37;
+    color: #0d0d0d;
+}
+
+/* Sección Bar y Menú */
+.bar-section {
+    padding: 60px 20px;
+    background-color: #121212;
+    border-top: 1px solid #2a2a2a;
+}
+
+.bar-section h2 {
+    color: #d4af37;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.bar-subtitle {
+    color: #a5a5a5;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.mystery-drink {
+    background: linear-gradient(135deg, #1f1a0a, #0d0d0d);
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 25px;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    position: relative;
+}
+
+.mystery-drink h3 {
+    color: #d4af37;
+    margin-top: 10px;
+    font-size: 1.4rem;
+}
+
+.mystery-drink p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.badge {
+    background-color: #d4af37;
+    color: #0d0d0d;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.bar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 25px;
+    width: 380px;
+    text-align: left;
+}
+
+.menu-card.full-width {
+    width: 100%;
+}
+
+.menu-card h3 {
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.menu-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-card li {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card li strong {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.menu-card li span {
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+.toppings-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.toppings-tags span {
+    background-color: #262626;
+    color: #d4af37;
+    border: 1px solid #3a3a3a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #080808;
+    border-top: 1px solid #222;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.footer h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.footer-info {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    color: #d4af37;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.copyright {
+    font-size: 0.75rem !important;
+    color: #444 !important;
+    margin-top: 20px;
+}
+
+/* Botón Flotante de WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebc57;
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Modal / Ventana Flotante */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.modal-container {
+    background-color: #1a1a1a;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #aaaaaa;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #d4af37;
+}
+
+.modal-container h2 {
+    color: #d4af37;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.modal-subtitle {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.schedules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.day-card {
+    background-color: #111111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px 10px;
+}
+
+.day-card h4 {
+    color: #d4af37;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+}
+
+.day-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.day-card li {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.modal-btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.modal-btn-whatsapp:hover {
+    background-color: #1ebc57;
+}
+
+/* ==========================================
+   ADAPTACIÓN PARA CELULARES (MOBILE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* 1. Menú Superior */
+    .navbar {
+        flex-direction: column; /* Cambia el menú de horizontal a vertical */
+        padding: 15px 20px;
+        gap: 15px; /* Crea espacio uniforme entre el logo y los botones */
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los botones bajen ordenadamente si no caben */
+        justify-content: center;
+        align-items: center;
+        gap: 12px 15px; /* Separa los enlaces entre sí */
+        width: 100%;
+    }
+
+    nav a {
+        margin-left: 0; /* Quitamos los márgenes laterales viejos */
+        font-size: 0.85rem;
+    }
+
+    .btn-reserva {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* 2. Banner Principal (Hero) */
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Tamaño de texto más cómodo para pantallas pequeñas */
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    /* 3. Secciones y Tarjetas */
+    .rooms-section, .bar-section {
+        padding: 40px 15px;
+    }
+
+    .room-card, .menu-card {
+        width: 100%; /* Las tarjetas toman el ancho completo de la pantalla */
+    }
+
+    .mystery-drink {
+        padding: 20px 15px;
+    }
+
+    /* 4. Ventana Flotante de Horarios en Celular */
+    .modal-container {
+        padding: 20px 15px;
+        max-height: 85vh; /* Evita que el modal se corte en pantallas pequeñas */
+    }
+
+    .schedules-grid {
+        grid-template-columns: repeat(2, 1fr); /* Organiza los días en 2 columnas */
+        gap: 10px;
+    }
+
+    .day-card {
+        padding: 10px 5px;
+    }
+
+    .day-card h4 {
+        font-size: 0.8rem;
+    }
+
+    .day-card li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajuste extra para celulares muy pequeños (menos de 400px) */
+@media (max-width: 400px) {
+    .schedules-grid {
+        grid-template-columns: 1fr; /* Pone los días en 1 sola columna vertical */
+    }
+}
