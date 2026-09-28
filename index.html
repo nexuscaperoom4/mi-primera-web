@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS SCAPE ROOM</title>
-    <link rel="stylesheet" href="style.css?v=99">
+    <link rel="stylesheet" href="style.css?v=101">
     <!-- Cargar íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -20,6 +20,7 @@
             <a href="#salas">Salas</a>
             <a href="#tarifas">Tarifas</a>
             <a href="#bar">Menú & Bar</a>
+            <a href="#faq">Preguntas</a>
             <a href="#" class="btn-reserva" id="open-schedules-btn">Horarios</a>
         </nav>
     </header>
@@ -31,26 +32,43 @@
         <button id="hero-btn">Ver Salas</button>
     </main>
 
-    <!-- 1. SECCIÓN DE SALAS DE ESCAPE -->
+    <!-- 1. SECCIÓN DE SALAS DE ESCAPE CON IMÁGENES DEL MURAL -->
     <section class="rooms-section" id="salas">
         <h2>NUESTRAS SALAS DE INMERSIÓN</h2>
+        <p class="section-subtitle">Acepta el desafío y vive una experiencia inmersiva única con tu equipo.</p>
+        
         <div class="rooms-grid">
-            <div class="room-card">
-                <span class="room-tag terror">👻 Terror</span>
-                <h3>San Judas Hospital</h3>
-                <p>60 MIN | DIFICULTAD: ALTA <span style="color: #FFD700;">⭐⭐⭐⭐☆</span></p>
-                <button class="btn-card open-modal">Ver Horarios & Reservar</button>
+            <!-- SAN JUDAS HOSPITAL -->
+            <div class="room-card" style="padding: 0; overflow: hidden; border-radius: 16px;">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="mural.jpeg" alt="San Judas Hospital" style="width: 100%; height: 100%; object-fit: cover; object-position: right center;">
+                    <span class="room-tag terror" style="position: absolute; top: 15px; left: 15px; margin: 0; backdrop-filter: blur(4px);">👻 Terror</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3>San Judas Hospital</h3>
+                    <p>60 MIN | DIFICULTAD: ALTA <span style="color: #FFD700;">⭐⭐⭐⭐☆</span></p>
+                    <p style="font-size: 0.88rem; color: #a0aec0; margin-bottom: 20px;">Descubre la verdad sobre el Paciente Cero y el misterioso Dr. Ivanov antes de que el tiempo se agote.</p>
+                    <button class="btn-card open-modal">Ver Horarios & Reservar</button>
+                </div>
             </div>
-            <div class="room-card">
-                <span class="room-tag bank">🔒 Escape</span>
-                <h3>Prisión Máxima Seguridad</h3>
-                <p>60 MIN | DIFICULTAD: SUPER ALTA <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span></p>
-                <button class="btn-card open-modal">Ver Horarios & Reservar</button>
+
+            <!-- PRISIÓN MÁXIMA SEGURIDAD -->
+            <div class="room-card" style="padding: 0; overflow: hidden; border-radius: 16px;">
+                <div style="height: 220px; overflow: hidden; position: relative;">
+                    <img src="mural.jpeg" alt="Prisión Máxima Seguridad" style="width: 100%; height: 100%; object-fit: cover; object-position: left center;">
+                    <span class="room-tag bank" style="position: absolute; top: 15px; left: 15px; margin: 0; backdrop-filter: blur(4px);">🔒 Escape</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h3>Prisión Máxima Seguridad</h3>
+                    <p>60 MIN | DIFICULTAD: SUPER ALTA <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span></p>
+                    <p style="font-size: 0.88rem; color: #a0aec0; margin-bottom: 20px;">Planifica tu plan de fuga, vulnera la seguridad del recinto y escapa de las celdas a tiempo.</p>
+                    <button class="btn-card open-modal">Ver Horarios & Reservar</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. SECCIÓN TARIFAS EN CUADROS (CON CENTRADO FORZADO DIRECTO) -->
+    <!-- 2. SECCIÓN TARIFAS EN CUADROS -->
     <section class="pricing-section" id="tarifas">
         <h2>TARIFAS Y PRECIOS</h2>
         <p class="section-subtitle">EXPERIENCIA DE 60 MINUTOS — ¡Entre más juegan, menos paga cada uno!</p>
@@ -131,6 +149,34 @@
                     <span>🍋 Tajín / Chamoy</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" style="padding: 70px 6%; max-width: 900px; margin: 0 auto;">
+        <h2>PREGUNTAS FRECUENTES</h2>
+        <p class="section-subtitle">Todo lo que necesitas saber antes de iniciar tu misión.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
+                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Con cuánta anticipación debemos llegar?</summary>
+                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Recomendamos llegar 15 minutos antes de la hora agendada para la explicación de las reglas de juego e instrucciones iniciales de seguridad.</p>
+            </details>
+
+            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
+                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Qué pasa si no logramos escapar a tiempo?</summary>
+                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Al cumplir los 60 minutos, nuestro Game Master abrirá las puertas y les explicará la resolución de los enigmas que hayan quedado pendientes.</p>
+            </details>
+
+            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
+                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Es apto para todas las edades?</summary>
+                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">¡Sí! Es una actividad perfecta para familias, grupos de amigos y empresas. Los menores de edad son bienvenidos acompañados de un adulto responsable.</p>
+            </details>
+
+            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
+                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Realmente nos quedamos encerrados?</summary>
+                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Por motivos de seguridad, siempre hay un botón de salida de emergencia disponible y el equipo de control monitorea la sala en todo momento mediante cámaras de circuito cerrado.</p>
+            </details>
         </div>
     </section>
 
