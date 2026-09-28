@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS SCAPE ROOM</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=99">
     <!-- Cargar íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="background-color: #08080a; color: #e2e8f0; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif;">
 
     <!-- Menú superior -->
     <header class="navbar">
@@ -25,7 +25,7 @@
     </header>
 
     <!-- Banner Principal (Hero con fondo sutil de ajedrez / túnel del logo) -->
-    <main class="hero">
+    <main class="hero" style="height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; background-color: #08080a; background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%), radial-gradient(circle at center, rgba(31, 40, 51, 0.85) 0%, #08080a 85%); background-size: 60px 60px, 60px 60px, 60px 60px, 60px 60px, 100% 100%; background-position: 0 0, 0 30px, 30px -30px, -30px 0px, 0 0; border-bottom: 1px solid rgba(255, 215, 0, 0.15);">
         <h1>N<span class="gold">EX</span>US SCAPE ROOM</h1>
         <p>CONECTA. PIENSA. ESCAPA.</p>
         <button id="hero-btn">Ver Salas</button>
@@ -50,37 +50,41 @@
         </div>
     </section>
 
-    <!-- 2. SECCIÓN TARIFAS EN CUADROS -->
+    <!-- 2. SECCIÓN TARIFAS EN CUADROS (CON CENTRADO FORZADO DIRECTO) -->
     <section class="pricing-section" id="tarifas">
         <h2>TARIFAS Y PRECIOS</h2>
         <p class="section-subtitle">EXPERIENCIA DE 60 MINUTOS — ¡Entre más juegan, menos paga cada uno!</p>
 
-        <div class="pricing-container">
-            <div class="pricing-card">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 0 auto;">
+            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
                 <div class="pricing-group">2 PERSONAS</div>
                 <div class="pricing-price">$69.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $138.000</div>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
                 <div class="pricing-group">3 PERSONAS</div>
                 <div class="pricing-price">$69.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $207.000</div>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
                 <div class="pricing-group">4 PERSONAS</div>
                 <div class="pricing-price">$64.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $256.000</div>
             </div>
-            <div class="pricing-card">
+            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
                 <div class="pricing-group">5 PERSONAS</div>
                 <div class="pricing-price">$59.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $295.000</div>
             </div>
-            <div class="pricing-card featured">
-                <span class="best-price-badge">MEJOR PRECIO</span>
-                <div class="pricing-group">6 PERSONAS</div>
-                <div class="pricing-price">$49.000 <small>/ persona</small></div>
-                <div class="pricing-total">Total: $294.000</div>
+            
+            <!-- FILA INFERIOR CENTRADA PARA MEJOR PRECIO -->
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+                <div class="pricing-card featured" style="width: 280px; max-width: 320px;">
+                    <span class="best-price-badge">MEJOR PRECIO</span>
+                    <div class="pricing-group">6 PERSONAS</div>
+                    <div class="pricing-price">$49.000 <small>/ persona</small></div>
+                    <div class="pricing-total">Total: $294.000</div>
+                </div>
             </div>
         </div>
 
