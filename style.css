@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -13,19 +13,19 @@ body {
     overflow-x: hidden;
 }
 
-/* RESALTADO DORADO */
+/* COLOR DORADO BASE Y RESALTADOS (EX) */
 .gold, h1 .gold, h3 .gold {
     color: #FFD700 !important;
     text-shadow: 0 0 12px rgba(255, 215, 0, 0.6) !important;
 }
 
-/* NAVEGACIÓN ELEGANTE */
+/* NAVEGACIÓN ELEGANTE Y RESPONSIVA */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 6%;
-    background: rgba(10, 10, 14, 0.92);
+    padding: 12px 5%;
+    background: rgba(10, 10, 14, 0.95);
     backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
@@ -35,23 +35,24 @@ body {
 }
 
 .logo img {
-    height: 48px;
+    height: 42px;
     object-fit: contain;
     filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
 }
 
 .navbar nav {
     display: flex;
-    gap: 24px;
+    gap: 18px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar nav a {
     color: #cbd5e1;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 1.2px;
+    font-size: 0.88rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
@@ -64,67 +65,51 @@ body {
 .btn-reserva {
     background: linear-gradient(135deg, #FFD700 0%, #b89600 100%);
     color: #000000 !important;
-    padding: 10px 22px;
+    padding: 8px 18px;
     border-radius: 25px;
     font-weight: 800 !important;
     box-shadow: 0 0 18px rgba(255, 215, 0, 0.35);
     transition: all 0.3s ease !important;
 }
 
-.btn-reserva:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 28px rgba(255, 215, 0, 0.75) !important;
-}
-
-/* HERO CON TEXTURA SUTIL ESTILO AJEDREZ / TUNEL DEL LOGO */
+/* HERO / BANNER PRINCIPAL RESPONSIVO */
 .hero {
-    height: 85vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 40px 20px;
     position: relative;
     background-color: #08080a;
-    /* Patrón sutil de cuadrícula geométrica alusivo al fondo del logo */
     background-image: 
-        linear-gradient(45deg, rgba(255, 255, 255, 0.025) 25%, transparent 25%), 
-        linear-gradient(-45deg, rgba(255, 255, 255, 0.025) 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.025) 75%), 
-        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.025) 75%),
-        radial-gradient(circle at center, rgba(31, 40, 51, 0.8) 0%, #08080a 85%);
+        linear-gradient(45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), 
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%), 
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%),
+        radial-gradient(circle at center, rgba(31, 40, 51, 0.85) 0%, #08080a 85%);
     background-size: 60px 60px, 60px 60px, 60px 60px, 60px 60px, 100% 100%;
     background-position: 0 0, 0 30px, 30px -30px, -30px 0px, 0 0;
     border-bottom: 1px solid rgba(255, 215, 0, 0.15);
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(to top, #08080a, transparent);
-    pointer-events: none;
-}
-
 .hero h1 {
-    font-size: 3.8rem;
-    letter-spacing: 6px;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    letter-spacing: 3px;
     margin-bottom: 12px;
     text-transform: uppercase;
     font-weight: 900;
     text-shadow: 0 0 25px rgba(0, 0, 0, 0.95);
     z-index: 2;
+    word-break: break-word;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    letter-spacing: 7px;
+    font-size: clamp(0.95rem, 3vw, 1.25rem);
+    letter-spacing: 4px;
     color: #94a3b8;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-weight: 600;
     z-index: 2;
 }
@@ -133,12 +118,12 @@ body {
     background: transparent;
     color: #FFD700;
     border: 2px solid #FFD700;
-    padding: 14px 36px;
-    font-size: 0.95rem;
+    padding: 12px 30px;
+    font-size: 0.9rem;
     font-weight: 800;
     border-radius: 30px;
     cursor: pointer;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: 0 0 12px rgba(255, 215, 0, 0.2);
@@ -152,18 +137,18 @@ body {
     transform: translateY(-3px);
 }
 
-/* SECCIONES */
+/* SECCIONES Y CONTENEDORES */
 section {
-    padding: 80px 6%;
+    padding: 60px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 section h2 {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
     color: #FFD700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 12px;
     text-transform: uppercase;
     text-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
@@ -172,55 +157,39 @@ section h2 {
 .section-subtitle, .bar-subtitle {
     text-align: center;
     color: #94a3b8;
-    margin-bottom: 45px;
-    font-size: 0.98rem;
+    margin-bottom: 35px;
+    font-size: clamp(0.85rem, 2.5vw, 0.98rem);
 }
 
 /* SALAS DE ESCAPE */
 .rooms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
 .room-card {
-    background: linear-gradient(145deg, #11141c, #0b0d12);
-    border: 1px solid rgba(255, 215, 0, 0.18);
+    flex: 1 1 300px;
+    max-width: 500px;
+    width: 100%;
+    background: #11141c;
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 16px;
-    padding: 35px 30px;
-    text-align: center;
-    position: relative;
-    transition: all 0.35s ease;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .room-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: #FFD700;
-    box-shadow: 0 18px 40px rgba(255, 215, 0, 0.25);
 }
-
-.room-tag {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 800;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-}
-
-.room-tag.terror { background: rgba(185, 28, 28, 0.25); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); }
-.room-tag.bank { background: rgba(30, 64, 175, 0.25); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
-
-.room-card h3 { font-size: 1.7rem; margin-bottom: 12px; color: #f8fafc; }
-.room-card p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 25px; }
 
 .btn-card {
     background: #FFD700;
     color: #000;
     border: none;
-    padding: 12px 24px;
+    padding: 12px 20px;
     border-radius: 8px;
     font-weight: 800;
     cursor: pointer;
@@ -229,36 +198,18 @@ section h2 {
     transition: all 0.3s ease;
 }
 
-.btn-card:hover { background: #e6c200; box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
-
-/* TARIFAS Y PRECIOS (TARJETA DESTACADA CENTRADA ABAJO) */
-.pricing-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 22px;
-}
-
+/* TARIFAS Y PRECIOS */
 .pricing-card {
-    flex: 1 1 210px;
-    max-width: 260px;
     background: #11141c;
     border: 1px solid #1e2430;
     border-radius: 14px;
-    padding: 24px 18px;
+    padding: 20px 15px;
     text-align: center;
     position: relative;
     transition: all 0.3s ease;
 }
 
-.pricing-card:hover {
-    border-color: rgba(255, 215, 0, 0.5);
-    transform: translateY(-4px);
-}
-
 .pricing-card.featured {
-    flex: 1 1 280px;
-    max-width: 320px;
     border: 2px solid #FFD700;
     background: linear-gradient(145deg, #181d28, #11141c);
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.22);
@@ -266,92 +217,87 @@ section h2 {
 
 .best-price-badge {
     position: absolute;
-    top: -13px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
     background: #FFD700;
     color: #000;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 900;
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 12px;
     letter-spacing: 1px;
 }
 
-.pricing-group { font-weight: 700; color: #94a3b8; margin-bottom: 12px; font-size: 0.9rem; }
-.pricing-price { font-size: 1.55rem; font-weight: 900; color: #FFD700; }
-.pricing-total { font-size: 0.85rem; color: #64748b; margin-top: 6px; }
+.pricing-group { font-weight: 700; color: #94a3b8; margin-bottom: 10px; font-size: 0.85rem; }
+.pricing-price { font-size: 1.4rem; font-weight: 900; color: #FFD700; }
+.pricing-total { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
 
 .pricing-note {
     text-align: center;
-    margin-top: 45px;
+    margin-top: 35px;
     background: #0d1017;
-    padding: 30px;
+    padding: 20px;
     border-radius: 14px;
     border: 1px dashed rgba(255, 215, 0, 0.3);
+    font-size: 0.9rem;
 }
 
 .btn-reserva-directa {
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 15px;
     background: #25D366;
     color: white;
     text-decoration: none;
-    padding: 13px 28px;
+    padding: 12px 24px;
     border-radius: 30px;
     font-weight: 800;
+    font-size: 0.9rem;
     box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
-    transition: transform 0.3s ease;
 }
-
-.btn-reserva-directa:hover { transform: scale(1.04); }
 
 /* LABORATORIO DE GRANIZADOS */
 .slushie-highlight {
     background: linear-gradient(145deg, #141822, #0d1017);
     border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 18px;
-    padding: 35px;
+    padding: 25px 15px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .slushie-highlight .badge {
     background: #FFD700;
     color: #000;
     font-weight: 900;
-    padding: 7px 18px;
+    padding: 6px 14px;
     border-radius: 25px;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
 }
 
-.slushie-info { margin: 18px 0 28px 0; color: #cbd5e1; }
+.slushie-info { margin: 15px 0 20px 0; color: #cbd5e1; font-size: 0.9rem; }
 
 .slushie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
 }
 
 .slushie-card {
     background: #08080a;
-    padding: 22px;
+    padding: 18px;
     border-radius: 12px;
     border: 1px solid #1e2430;
 }
-
-.slushie-tag { display: inline-block; font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; }
-.slushie-tag.cobalto { color: #60a5fa; }
-.slushie-tag.fuga { color: #f87171; }
 
 .toppings-tags span {
     display: inline-block;
     background: #161b26;
     color: #FFD700;
-    padding: 7px 16px;
+    padding: 6px 12px;
     border-radius: 20px;
-    margin: 6px;
-    font-size: 0.85rem;
+    margin: 4px;
+    font-size: 0.8rem;
     font-weight: 600;
     border: 1px solid rgba(255, 215, 0, 0.2);
 }
@@ -359,38 +305,35 @@ section h2 {
 /* FOOTER */
 .footer {
     background: #040405;
-    padding: 50px 6% 25px 6%;
+    padding: 40px 5% 20px 5%;
     text-align: center;
     border-top: 1px solid #1a1e29;
 }
 
-.footer h3 { font-size: 1.6rem; margin-bottom: 8px; }
-.footer-info p { margin: 10px 0; color: #94a3b8; font-size: 0.92rem; }
-.copyright { margin-top: 35px; color: #475569; font-size: 0.82rem; }
+.footer h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.footer-info p { margin: 8px 0; color: #94a3b8; font-size: 0.88rem; }
+.copyright { margin-top: 25px; color: #475569; font-size: 0.78rem; }
 
 /* BOTÓN FLOTANTE WHATSAPP */
 .whatsapp-btn {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
+    bottom: 20px;
+    right: 20px;
     background: #25D366;
     color: white;
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 28px;
     box-shadow: 0 4px 22px rgba(37, 211, 102, 0.55);
     z-index: 9999;
     text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
-.whatsapp-btn:hover { transform: scale(1.12); }
-
-/* MODAL DE HORARIOS */
+/* MODAL DE HORARIOS RESPONSIVO */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -410,37 +353,69 @@ section h2 {
 .modal-container {
     background: #11141c;
     border: 1px solid #FFD700;
-    padding: 35px;
-    border-radius: 18px;
-    max-width: 560px;
-    width: 90%;
+    padding: 25px 20px;
+    border-radius: 16px;
+    max-width: 520px;
+    width: 92%;
     position: relative;
-    max-height: 88vh;
+    max-height: 85vh;
     overflow-y: auto;
-    box-shadow: 0 0 35px rgba(255, 215, 0, 0.25);
 }
 
 .modal-close {
     position: absolute;
-    top: 16px; right: 22px;
+    top: 12px; right: 18px;
     background: none; border: none;
-    color: #fff; font-size: 30px; cursor: pointer;
+    color: #fff; font-size: 28px; cursor: pointer;
 }
 
-.schedules-grid { display: grid; gap: 18px; margin: 22px 0; }
-.day-card { background: #08080a; padding: 18px; border-radius: 10px; }
+.schedules-grid { display: grid; gap: 15px; margin: 20px 0; }
+.day-card { background: #08080a; padding: 15px; border-radius: 10px; }
 .day-card.highlight-day { border: 1px solid #FFD700; }
-.day-card h4 { color: #FFD700; margin-bottom: 10px; }
-.day-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-.day-card li { background: #1a1e29; padding: 5px 12px; border-radius: 6px; font-size: 0.88rem; }
+.day-card h4 { color: #FFD700; margin-bottom: 8px; font-size: 0.95rem; }
+.day-card ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.day-card li { background: #1a1e29; padding: 4px 10px; border-radius: 6px; font-size: 0.82rem; }
 
 .modal-btn-whatsapp {
     display: block;
     text-align: center;
     background: #25D366;
     color: white;
-    padding: 14px;
+    padding: 12px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* REGLAS ESPECÍFICAS PARA PANTALLAS MÓVILES (MÓVILES Y TABLETS) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 45px 4%;
+    }
+
+    .pricing-card {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+    }
+
+    .pricing-card.featured {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
