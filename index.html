@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS ESCAPE ROOM</title>
+    <title>NEXUS SCAPE ROOM</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Cargar íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,6 +16,7 @@
         <nav>
             <a href="#">Inicio</a>
             <a href="#salas">Salas</a>
+            <a href="#tarifas">Tarifas</a>
             <a href="#menu-bar">Menú & Bar</a>
             <a href="#" class="btn-reserva" id="open-schedules-btn">Horarios</a>
         </nav>
@@ -23,46 +24,101 @@
 
     <!-- Banner Principal (Hero) -->
     <main class="hero">
-        <h1>NE<span class="gold">X</span>US ESCAPE</h1>
+        <h1>NE<span class="gold">X</span>US SCAPE ROOM</h1>
         <p>CONECTA. PIENSA. ESCAPA.</p>
         <button id="hero-btn">Ver Salas</button>
     </main>
 
     <!-- 1. SECCIÓN DE SALAS DE ESCAPE -->
     <section class="rooms-section" id="salas">
-        <h2>NUESTROS DESAFÍOS</h2>
+        <h2>NUESTRAS SALAS DE INMERSIÓN</h2>
         <div class="rooms-grid">
             <div class="room-card">
-                <span class="room-tag terror">👻 Terror</span>
+                <span class="room-tag terror">👻 Paciente Cero</span>
                 <h3>El Ritual del Silencio</h3>
                 <p>60 MIN | DIFICULTAD: ALTA</p>
-                <button class="btn-card open-modal">Ver Horarios</button>
+                <button class="btn-card open-modal">Ver Horarios & Reservar</button>
             </div>
             <div class="room-card">
-                <span class="room-tag bank">🏦 Robo al Banco</span>
-                <h3>El Botín de la Reserva</h3>
+                <span class="room-tag bank">🔒 Máxima Seguridad</span>
+                <h3>Código de Fuga</h3>
                 <p>60 MIN | DIFICULTAD: MEDIA</p>
-                <button class="btn-card open-modal">Ver Horarios</button>
+                <button class="btn-card open-modal">Ver Horarios & Reservar</button>
             </div>
         </div>
     </section>
 
-    <!-- 2. SECCIÓN MENÚ & BAR -->
-    <section class="bar-section" id="menu-bar">
-        <h2>LABORATORIO DE POCIONES</h2>
-        <p class="bar-subtitle">Bebidas refrescantes sin alcohol, preparadas con química & magia.</p>
+    <!-- 2. SECCIÓN TARIFAS -->
+    <section class="pricing-section" id="tarifas">
+        <h2>TARIFAS Y PRECIOS</h2>
+        <p class="section-subtitle">EXPERIENCIA DE 60 MINUTOS — ¡Entre más juegan, menos paga cada uno!</p>
 
-        <!-- Destacado: Bebida Misteriosa -->
-        <div class="mystery-drink">
-            <span class="badge">Especial Escape Room</span>
-            <h3>🎲 Poción Secreta del Día</h3>
-            <p>¿Te atreves al reto? Una combinación misteriosa y deliciosa. Solo dinos si tienes alergias y el laboratorio hará la magia.</p>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <div class="pricing-group">2 PERSONAS</div>
+                <div class="pricing-price">$69.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $138.000</div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-group">3 PERSONAS</div>
+                <div class="pricing-price">$69.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $207.000</div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-group">4 PERSONAS</div>
+                <div class="pricing-price">$64.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $256.000</div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-group">5 PERSONAS</div>
+                <div class="pricing-price">$59.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $295.000</div>
+            </div>
+            <div class="pricing-card featured">
+                <span class="best-price-badge">MEJOR PRECIO</span>
+                <div class="pricing-group">6 PERSONAS</div>
+                <div class="pricing-price">$49.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $294.000</div>
+            </div>
+        </div>
+
+        <div class="pricing-note">
+            <p><strong>Capacidad recomendada:</strong> Hasta 6 jugadores por sala.</p>
+            <p><strong>Jugador adicional:</strong> $49.000 (Solo con autorización previa).</p>
+            <a href="https://wa.me/573023243653?text=¡Hola!%20Quiero%20consultar%20disponibilidad%20para%20reservar%20una%20sala." class="btn-reserva-directa" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Reservar Mi Sala
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN MENÚ & BAR -->
+    <section class="bar-section" id="menu-bar">
+        <h2>LABORATORIO DE POCIONES & GRANIZADOS</h2>
+        <p class="bar-subtitle">Bebidas refrescantes con química, magia y temática de nuestras salas.</p>
+
+        <!-- Destacado: Granizados de la Casa -->
+        <div class="slushie-highlight">
+            <span class="badge">Nuestros Granizados Especiales — $9.900 c/u</span>
+            <p class="slushie-info">Incluye Vaso de 9 oz + 1 Topping a elección</p>
+
+            <div class="slushie-grid">
+                <div class="slushie-card">
+                    <span class="slushie-tag cobalto">☣️ Paciente Cero</span>
+                    <h3>Fórmula Cobalto-60</h3>
+                    <p class="slushie-flavor">Mora azul y uva + perlas y gelatina</p>
+                </div>
+                <div class="slushie-card">
+                    <span class="slushie-tag fuga">🔒 Máxima Seguridad</span>
+                    <h3>Código de Fuga</h3>
+                    <p class="slushie-flavor">Maracuyá y cereza + perlas y gomitas</p>
+                </div>
+            </div>
         </div>
 
         <div class="bar-grid">
             <!-- Categoría: Sodas Frutales -->
             <div class="menu-card">
-                <h3>🫧 Pociones & Elixires</h3>
+                <h3>🫧 Pociones & Elixires (Sodas)</h3>
                 <ul>
                     <li><strong>🟥 Poción Rubí</strong> <span>Frutos rojos</span></li>
                     <li><strong>🟡 Poción Solar</strong> <span>Frutos amarillos</span></li>
@@ -73,28 +129,14 @@
                 </ul>
             </div>
 
-            <!-- Categoría: Granizados -->
+            <!-- Categoría: Toppings -->
             <div class="menu-card">
-                <h3>❄️ Granizados & Experiencias</h3>
-                <ul>
-                    <li><strong>🍇 Granizado de Uva / 🥭 Maracuyá</strong> <span>Elige tu base favorita</span></li>
-                    <li><strong>🩸 Sangre de Dragón</strong> <span>Frutos rojos + gomitas mutantes</span></li>
-                    <li><strong>🌌 Poción Galáctica</strong> <span>Uva, soda y algodón de azúcar</span></li>
-                    <li><strong>🧙 La Poción del Hechicero</strong> <span>Crea tu combinación y recibe tu código único</span></li>
-                </ul>
-            </div>
-
-            <!-- Categoría: Ingredientes del Laboratorio -->
-            <div class="menu-card full-width">
                 <h3>🧪 Ingredientes del Laboratorio (Toppings)</h3>
                 <div class="toppings-tags">
                     <span>🧸 Gomitas mutantes</span>
                     <span>💥 Perlas explosivas</span>
                     <span>☁️ Mini malvaviscos</span>
                     <span>🌈 Polvo mágico</span>
-                    <span>🍓 Cristales de fruta</span>
-                    <span>🥥 Coco rallado</span>
-                    <span>🍪 Rocas de cacao</span>
                     <span>🍋 Tajín / Chamoy</span>
                 </div>
             </div>
@@ -104,13 +146,13 @@
     <!-- Pie de página -->
     <footer class="footer">
         <div class="footer-content">
-            <h3>NE<span class="gold">X</span>US ESCAPE ROOM</h3>
+            <h3>NE<span class="gold">X</span>US SCAPE ROOM</h3>
             <p>Conecta. Piensa. Escapa.</p>
             <div class="footer-info">
                 <p>📍 Floridablanca, Santander</p>
-                <p>⏰ Martes a Domingo</p>
+                <p>📲 Reservas por WhatsApp: 302 324 3653</p>
             </div>
-            <p class="copyright">&copy; 2026 Nexus Escape Room. Todos los derechos reservados.</p>
+            <p class="copyright">&copy; 2026 Nexus Scape Room. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -118,65 +160,52 @@
     <div class="modal-overlay" id="schedules-modal">
         <div class="modal-container">
             <button class="modal-close" id="close-modal-btn">&times;</button>
-            <h2>⏰ HORARIOS DE ATENCIÓN</h2>
-            <p class="modal-subtitle">Reserva tu turno previa disponibilidad</p>
+            <h2>⏰ HORARIOS Y RESERVAS</h2>
+            <p class="modal-subtitle">Reserva tu turno previa disponibilidad (Llega 15 min antes)</p>
 
+            <div class="customer-service-box">
+                <h4>💬 Horario de Atención en WhatsApp y Redes (Para Agendar)</h4>
+                <p><strong>Lunes a Viernes:</strong> 8:00 a.m. - 12:00 p.m. | 2:00 p.m. - 6:00 p.m.</p>
+                <p><strong>Sábados:</strong> 9:00 a.m. - 2:00 p.m.</p>
+            </div>
+
+            <h3 class="game-schedules-title">🎮 Franjas de Juego Disponibles</h3>
             <div class="schedules-grid">
-                <div class="day-card">
-                    <h4>Martes a Jueves</h4>
-                    <ul>
-                        <li>3:00 pm</li>
-                        <li>4:30 pm</li>
-                        <li>6:00 pm</li>
-                        <li>7:30 pm</li>
-                    </ul>
-                </div>
-
                 <div class="day-card">
                     <h4>Viernes</h4>
                     <ul>
-                        <li>2:00 pm</li>
-                        <li>3:30 pm</li>
-                        <li>5:00 pm</li>
-                        <li>6:30 pm</li>
-                        <li>8:00 pm</li>
+                        <li>2:00 P. M.</li>
+                        <li>3:30 P. M.</li>
+                        <li>5:00 P. M.</li>
+                        <li>6:30 P. M.</li>
+                        <li>8:00 P. M.</li>
                     </ul>
                 </div>
 
-                <div class="day-card">
-                    <h4>Sábado</h4>
+                <div class="day-card highlight-day">
+                    <h4>Sábados, Domingos y Festivos</h4>
                     <ul>
-                        <li>12:00 pm</li>
-                        <li>1:30 pm</li>
-                        <li>3:00 pm</li>
-                        <li>4:30 pm</li>
-                        <li>6:00 pm</li>
-                        <li>7:30 pm</li>
-                    </ul>
-                </div>
-
-                <div class="day-card">
-                    <h4>Domingo</h4>
-                    <ul>
-                        <li>12:00 pm</li>
-                        <li>1:30 pm</li>
-                        <li>3:00 pm</li>
-                        <li>4:30 pm</li>
-                        <li>6:00 pm</li>
-                        <li>7:30 pm</li>
+                        <li>10:00 A. M.</li>
+                        <li>11:30 A. M.</li>
+                        <li>1:00 P. M.</li>
+                        <li>2:30 P. M.</li>
+                        <li>4:00 P. M.</li>
+                        <li>5:30 P. M.</li>
+                        <li>7:00 P. M.</li>
+                        <li>8:30 P. M.</li>
                     </ul>
                 </div>
             </div>
 
-            <a href="https://wa.me/573000000000?text=¡Hola!%20Quiero%20reservar%20un%20horario%20para%20Nexus%20Escape." 
+            <a href="https://wa.me/573023243653?text=¡Hola!%20Quiero%20consultar%20disponibilidad%20para%20reservar%20un%20horario%20en%20Nexus%20Scape%20Room." 
                class="modal-btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Consultar Disponibilidad por WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Reservar Turno por WhatsApp
             </a>
         </div>
     </div>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/573183909817?text=¡Hola!%20Quiero%20más%20información%20para%20reservar%20una%20sala%20en%20Nexus%20Escape." 
+    <a href="https://wa.me/573023243653?text=¡Hola!%20Quiero%20más%20información%20para%20reservar%20una%20sala%20en%20Nexus%20Scape%20Room." 
        class="whatsapp-btn" 
        target="_blank" 
        rel="noopener noreferrer"
