@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXUS SCAPE ROOM</title>
-    <!-- Apuntamos directamente a la carpeta css donde está el diseño -->
     <link rel="stylesheet" href="style.css">
     <!-- Cargar íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +12,10 @@
 
     <!-- Menú superior -->
     <header class="navbar">
-        <div class="logo">NE<span class="gold">X</span>US</div>
+        <div class="logo">
+            <!-- Si ya subiste tu logo a la carpeta img con nombre logo.png se verá aquí -->
+            <img src="img/logo.png" alt="Nexus Scape Room" style="height: 45px; vertical-align: middle;" onerror="this.onerror=null; this.outerHTML='NE<span class=\'gold\'>X</span>US';">
+        </div>
         <nav>
             <a href="#">Inicio</a>
             <a href="#salas">Salas</a>
@@ -37,13 +39,13 @@
             <div class="room-card">
                 <span class="room-tag terror">👻 Terror</span>
                 <h3>San Judas Hospital</h3>
-                <p>60 MIN | DIFICULTAD: ALTA</p>
+                <p>60 MIN | DIFICULTAD: ALTA <span style="color: #FFD700;">⭐⭐⭐⭐☆</span></p>
                 <button class="btn-card open-modal">Ver Horarios & Reservar</button>
             </div>
             <div class="room-card">
                 <span class="room-tag bank">🔒 Escape</span>
                 <h3>Prisión Máxima Seguridad</h3>
-                <p>60 MIN | DIFICULTAD: MEDIA</p>
+                <p>60 MIN | DIFICULTAD: SUPER ALTA <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span></p>
                 <button class="btn-card open-modal">Ver Horarios & Reservar</button>
             </div>
         </div>
@@ -92,7 +94,7 @@
         </div>
     </section>
 
-    <!-- 3. SECCIÓN LABORATORIO DE GRANIZADOS (SIN SODAS) -->
+    <!-- 3. SECCIÓN LABORATORIO DE GRANIZADOS -->
     <section id="bar" class="bar-section">
         <h2>LABORATORIO DE GRANIZADOS</h2>
         <p class="bar-subtitle">Recarga energías antes o después de tu misión con nuestras bebidas exclusivas.</p>
