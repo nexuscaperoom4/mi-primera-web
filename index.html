@@ -2,66 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NEXUS SCAPE ROOM</title>
-    <link rel="stylesheet" href="style.css?v=101">
+    <link rel="stylesheet" href="style.css?v=300">
     <!-- Cargar íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body style="background-color: #08080a; color: #e2e8f0; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif;">
+<body>
 
     <!-- Menú superior -->
     <header class="navbar">
         <div class="logo">
-            <img src="logo.jpeg" alt="Nexus Scape Room" style="height: 45px; vertical-align: middle;">
+            <img src="logo.jpeg" alt="Nexus Scape Room">
         </div>
         <nav>
             <a href="#">Inicio</a>
             <a href="#salas">Salas</a>
             <a href="#tarifas">Tarifas</a>
-            <a href="#bar">Menú & Bar</a>
-            <a href="#faq">Preguntas</a>
+            <a href="#bar">Bar</a>
+            <a href="#faq">FAQ</a>
             <a href="#" class="btn-reserva" id="open-schedules-btn">Horarios</a>
         </nav>
     </header>
 
-    <!-- Banner Principal (Hero con fondo sutil de ajedrez / túnel del logo) -->
-    <main class="hero" style="height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; position: relative; background-color: #08080a; background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.04) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.04) 75%), radial-gradient(circle at center, rgba(31, 40, 51, 0.85) 0%, #08080a 85%); background-size: 60px 60px, 60px 60px, 60px 60px, 60px 60px, 100% 100%; background-position: 0 0, 0 30px, 30px -30px, -30px 0px, 0 0; border-bottom: 1px solid rgba(255, 215, 0, 0.15);">
+    <!-- Banner Principal (Hero) -->
+    <main class="hero">
         <h1>N<span class="gold">EX</span>US SCAPE ROOM</h1>
         <p>CONECTA. PIENSA. ESCAPA.</p>
         <button id="hero-btn">Ver Salas</button>
     </main>
 
-    <!-- 1. SECCIÓN DE SALAS DE ESCAPE CON IMÁGENES DEL MURAL -->
+    <!-- 1. SECCIÓN DE SALAS DE ESCAPE -->
     <section class="rooms-section" id="salas">
         <h2>NUESTRAS SALAS DE INMERSIÓN</h2>
         <p class="section-subtitle">Acepta el desafío y vive una experiencia inmersiva única con tu equipo.</p>
         
         <div class="rooms-grid">
             <!-- SAN JUDAS HOSPITAL -->
-            <div class="room-card" style="padding: 0; overflow: hidden; border-radius: 16px;">
-                <div style="height: 220px; overflow: hidden; position: relative;">
-                    <img src="mural.jpeg" alt="San Judas Hospital" style="width: 100%; height: 100%; object-fit: cover; object-position: right center;">
-                    <span class="room-tag terror" style="position: absolute; top: 15px; left: 15px; margin: 0; backdrop-filter: blur(4px);">👻 Terror</span>
+            <div class="room-card">
+                <div class="room-img-container">
+                    <img src="mural.jpeg" alt="San Judas Hospital" class="mural-hospital">
+                    <span class="room-tag terror">👻 Terror</span>
                 </div>
-                <div style="padding: 25px;">
+                <div class="room-content">
                     <h3>San Judas Hospital</h3>
-                    <p>60 MIN | DIFICULTAD: ALTA <span style="color: #FFD700;">⭐⭐⭐⭐☆</span></p>
-                    <p style="font-size: 0.88rem; color: #a0aec0; margin-bottom: 20px;">Descubre la verdad sobre el Paciente Cero y el misterioso Dr. Ivanov antes de que el tiempo se agote.</p>
+                    <p class="room-info">60 MIN | DIFICULTAD: ALTA ⭐⭐⭐⭐☆</p>
+                    <p class="room-desc">Descubre la verdad sobre el Paciente Cero y el misterioso Dr. Ivanov antes de que el tiempo se agote.</p>
                     <button class="btn-card open-modal">Ver Horarios & Reservar</button>
                 </div>
             </div>
 
             <!-- PRISIÓN MÁXIMA SEGURIDAD -->
-            <div class="room-card" style="padding: 0; overflow: hidden; border-radius: 16px;">
-                <div style="height: 220px; overflow: hidden; position: relative;">
-                    <img src="mural.jpeg" alt="Prisión Máxima Seguridad" style="width: 100%; height: 100%; object-fit: cover; object-position: left center;">
-                    <span class="room-tag bank" style="position: absolute; top: 15px; left: 15px; margin: 0; backdrop-filter: blur(4px);">🔒 Escape</span>
+            <div class="room-card">
+                <div class="room-img-container">
+                    <img src="mural.jpeg" alt="Prisión Máxima Seguridad" class="mural-prision">
+                    <span class="room-tag bank">🔒 Escape</span>
                 </div>
-                <div style="padding: 25px;">
+                <div class="room-content">
                     <h3>Prisión Máxima Seguridad</h3>
-                    <p>60 MIN | DIFICULTAD: SUPER ALTA <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span></p>
-                    <p style="font-size: 0.88rem; color: #a0aec0; margin-bottom: 20px;">Planifica tu plan de fuga, vulnera la seguridad del recinto y escapa de las celdas a tiempo.</p>
+                    <p class="room-info">60 MIN | DIFICULTAD: SUPER ALTA ⭐⭐⭐⭐⭐</p>
+                    <p class="room-desc">Planifica tu plan de fuga, vulnera la seguridad del recinto y escapa de las celdas a tiempo.</p>
                     <button class="btn-card open-modal">Ver Horarios & Reservar</button>
                 </div>
             </div>
@@ -73,36 +73,34 @@
         <h2>TARIFAS Y PRECIOS</h2>
         <p class="section-subtitle">EXPERIENCIA DE 60 MINUTOS — ¡Entre más juegan, menos paga cada uno!</p>
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 0 auto;">
-            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
+        <div class="pricing-container">
+            <div class="pricing-card">
                 <div class="pricing-group">2 PERSONAS</div>
                 <div class="pricing-price">$69.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $138.000</div>
             </div>
-            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
+            <div class="pricing-card">
                 <div class="pricing-group">3 PERSONAS</div>
                 <div class="pricing-price">$69.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $207.000</div>
             </div>
-            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
+            <div class="pricing-card">
                 <div class="pricing-group">4 PERSONAS</div>
                 <div class="pricing-price">$64.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $256.000</div>
             </div>
-            <div class="pricing-card" style="flex: 1 1 200px; max-width: 240px;">
+            <div class="pricing-card">
                 <div class="pricing-group">5 PERSONAS</div>
                 <div class="pricing-price">$59.000 <small>/ persona</small></div>
                 <div class="pricing-total">Total: $295.000</div>
             </div>
             
-            <!-- FILA INFERIOR CENTRADA PARA MEJOR PRECIO -->
-            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
-                <div class="pricing-card featured" style="width: 280px; max-width: 320px;">
-                    <span class="best-price-badge">MEJOR PRECIO</span>
-                    <div class="pricing-group">6 PERSONAS</div>
-                    <div class="pricing-price">$49.000 <small>/ persona</small></div>
-                    <div class="pricing-total">Total: $294.000</div>
-                </div>
+            <!-- MEJOR PRECIO CENTRADO ABAJO -->
+            <div class="pricing-card featured center-featured">
+                <span class="best-price-badge">MEJOR PRECIO</span>
+                <div class="pricing-group">6 PERSONAS</div>
+                <div class="pricing-price">$49.000 <small>/ persona</small></div>
+                <div class="pricing-total">Total: $294.000</div>
             </div>
         </div>
 
@@ -153,29 +151,29 @@
     </section>
 
     <!-- 4. SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
-    <section id="faq" style="padding: 70px 6%; max-width: 900px; margin: 0 auto;">
+    <section id="faq">
         <h2>PREGUNTAS FRECUENTES</h2>
         <p class="section-subtitle">Todo lo que necesitas saber antes de iniciar tu misión.</p>
 
-        <div style="display: flex; flex-direction: column; gap: 15px;">
-            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
-                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Con cuánta anticipación debemos llegar?</summary>
-                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Recomendamos llegar 15 minutos antes de la hora agendada para la explicación de las reglas de juego e instrucciones iniciales de seguridad.</p>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>¿Con cuánta anticipación debemos llegar?</summary>
+                <p>Recomendamos llegar 15 minutos antes de la hora agendada para la explicación de las reglas de juego e instrucciones iniciales de seguridad.</p>
             </details>
 
-            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
-                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Qué pasa si no logramos escapar a tiempo?</summary>
-                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Al cumplir los 60 minutos, nuestro Game Master abrirá las puertas y les explicará la resolución de los enigmas que hayan quedado pendientes.</p>
+            <details class="faq-item">
+                <summary>¿Qué pasa si no logramos escapar a tiempo?</summary>
+                <p>Al cumplir los 60 minutos, nuestro Game Master abrirá las puertas y les explicará la resolución de los enigmas que hayan quedado pendientes.</p>
             </details>
 
-            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
-                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Es apto para todas las edades?</summary>
-                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">¡Sí! Es una actividad perfecta para familias, grupos de amigos y empresas. Los menores de edad son bienvenidos acompañados de un adulto responsable.</p>
+            <details class="faq-item">
+                <summary>¿Es apto para todas las edades?</summary>
+                <p>¡Sí! Es una actividad perfecta para familias, grupos de amigos y empresas. Los menores de edad son bienvenidos acompañados de un adulto responsable.</p>
             </details>
 
-            <details style="background: #11141c; border: 1px solid #1e2430; border-radius: 12px; padding: 18px 22px; cursor: pointer;">
-                <summary style="font-weight: 700; color: #FFD700; font-size: 1.05rem; outline: none;">¿Realmente nos quedamos encerrados?</summary>
-                <p style="margin-top: 12px; color: #cbd5e1; font-size: 0.92rem; line-height: 1.5;">Por motivos de seguridad, siempre hay un botón de salida de emergencia disponible y el equipo de control monitorea la sala en todo momento mediante cámaras de circuito cerrado.</p>
+            <details class="faq-item">
+                <summary>¿Realmente nos quedamos encerrados?</summary>
+                <p>Por motivos de seguridad, siempre hay un botón de salida de emergencia disponible y el equipo de control monitorea la sala en todo momento mediante cámaras.</p>
             </details>
         </div>
     </section>
